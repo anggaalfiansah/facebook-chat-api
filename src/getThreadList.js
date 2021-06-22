@@ -210,7 +210,7 @@ module.exports = function(defaultFuncs, api, ctx) {
         if (timestamp) {
           resData[0].o0.data.viewer.message_threads.nodes.shift();
         }
-        callback(null, formatThreadList(resData[0].o0.data.viewer.message_threads.nodes));
+        callback(formatThreadList(resData[0].o0.data.viewer.message_threads.nodes));
       })
       .catch((err) => {
         log.error("getThreadList", err);
